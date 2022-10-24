@@ -25,6 +25,8 @@ Route::post('/register', [AuthController::class, 'register']);
 
 Route::group(['middleware' => 'client_credentials'], function () {
     Route::resource('students', StudentController::class);
+    Route::get('/export', [StudentController::class, 'export']);
+    Route::post('/import', [StudentController::class, 'import']);
 });
 
 // Route::middleware('auth:api')->group(function () {

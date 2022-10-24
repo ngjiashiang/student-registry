@@ -23,7 +23,7 @@ class AuthController extends Controller
         $user->name = $request['name'];
         $user->save();
 
-        return response(['msg' => 'success'], 200);
+        return response(['msg' => 'success', 'user'=> $user], 200);
     }
 
     public function login(Request $request) {
