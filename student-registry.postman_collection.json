@@ -1,0 +1,443 @@
+{
+	"info": {
+		"_postman_id": "dcbc0a82-48ab-4692-9938-6a3dfa44be2d",
+		"name": "student-registry",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register()",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "asdasd",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "admin@asd.asd",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "asdasd",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login()",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "assd@asd.asd",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "asdasd",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index()  (no token)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/students",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index()",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGVlMzRjODY1NjM5MzkzMjQ4MmZlYTQ0MDhmNWU0Y2MyMGQyMGQzMmQxNzRiOWUxMTkwOTBlODRhNTAzZTA3OTRmYTM5OWRkNTRiM2NmMGMiLCJpYXQiOjE2NjY2NDUxNzMuOTYyMDM4LCJuYmYiOjE2NjY2NDUxNzMuOTYyMDQzLCJleHAiOjE2OTgxODExNzMuOTM3MTE0LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.LkK07tElszuapjN0FW6wK7bItP441uzAEB3FHRuFty7UKrig5_toRegMGWSnTJYRCvBaVU6Ux--oib_IeAi2no4J2zyPeXxtkPCgwmRe5Cz6v9Rh4tKEDLS2Dkz9Z-wo7fzCdRdgLszqeU6Fa2m0h66qDq5l9GVD5PHFaq--v1Urauys_ylysjwRawwxGVa-vic2bTqw87wdsSaeyfTXELYIIJLuP9rMpe0Euqio3_hLIsQzqNP0i-mbSfEPADmQNUCWUbO6nJu9JCdVayR1Gk8Y5TmjBKb1m4iNKXaxaSeyikZ1rH0UKh1gl_Ma-FjgeHT7o93aO7AbaDsd8MEaDGB5yJwuZyPdhWK_8oKgSqds0ALnuxD69SFU3flrEjNB6onWilcPdHEdr6gpgMZ5_Tb5-C70Jo20LApbpUFfcKM6ZdCf7JuNlqOzOBQyw_sLcnXeoC-95NJtUfzpjIhUME65Ptz_rqcBFHJalmNozTK4vgwrmokgv3D0DK_gx027nAm4boIZy9XM66l6V15e0_PamWvQxo--ylOYsbWSN0HvvDKMRM_0eV7AalDl8VYy9PGbR1shHhjdwfsjYOmm4tb60F-AAULWsZ-nQYLQb9UPQDudoecNrn0UshSl3TDvdkpiszWE1t_q8FfPpmP90B9oLsUDQybztPKPihV2E6I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/students",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store()",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2ExOWI2ZTBkODFkNDdmZjhkNDJjNzcxN2M5YWNkYWRjNTQ3OGJkMmNkMjRjMmMwOTgzZTA4YjYzNTE1ZjU4Mjc5ZGZmNGEyZTRjY2U3NGUiLCJpYXQiOjE2NjY2Mzc5NDYuOTE4MTc0LCJuYmYiOjE2NjY2Mzc5NDYuOTE4MTc3LCJleHAiOjE2OTgxNzM5NDYuOTA3MTQ4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.E7Vy8u95paVs4Cw7KVkevSFBiNS-rvGg3b-MBQ_qSQvtF7Q0wM7aNzcfxvapJSK5Sm9WkwL9TgQzipQAPlUaHORWSsisiYGhOe8lblKqvCJfW_tyrrCo9WIoEQAXMs4ZsY6vN9lLxiq2XbRiHGOVISJMR6e-87xRem3OXXDDCP56FpK1DdHy2-jZ-h4hZjq0dEeBdIoN9Uh2TeuR9GrLUOKt14PYVQWlYkv2Uz5Rnv300NXllVO9Zu9DZqPHBAUrRaKL1v4uJoX12eUSRC7nlGzJzDBIdh5u65hEiZ33og8nrb800wqJyTprrZ_CzMBwCZcV-Kamz8dqXIInQAtDuKADoxSCE2W-2KYhHO1prWlWAy0dDk-57KKIQYvhi9D9NSiWmTbjM06hXC26z9WZbDYRVk620ar1LnUgfPJrCstyJLX29X5a29GxGfHgTzAbfHg1g9tvlCEJDcNV1cwu8AcA0VvwtivTL_oatzQcfrL6-bhk3rwRcwBihqvZ6y34VeL82WKsVz3qcaJySLZvgrUTS5pIWB1ne3nXqKVqqoFNQ_0ZzTPjf_C81HSILYU0PrNIJSaZlw6XMDUmsj6dvK9Dmv1PKLzRzhe-Ssy81SVOzi07Td5qyIfbQgzfQRO-_yqbd04RWBA9tMXPwFIAvVt5PZaASTRAT8iuuQwuh3M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Jogn Doe",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "assdasdads@assd.aaa",
+							"type": "default"
+						},
+						{
+							"key": "course",
+							"value": "course of singing",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/students",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show()  name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2ExOWI2ZTBkODFkNDdmZjhkNDJjNzcxN2M5YWNkYWRjNTQ3OGJkMmNkMjRjMmMwOTgzZTA4YjYzNTE1ZjU4Mjc5ZGZmNGEyZTRjY2U3NGUiLCJpYXQiOjE2NjY2Mzc5NDYuOTE4MTc0LCJuYmYiOjE2NjY2Mzc5NDYuOTE4MTc3LCJleHAiOjE2OTgxNzM5NDYuOTA3MTQ4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.E7Vy8u95paVs4Cw7KVkevSFBiNS-rvGg3b-MBQ_qSQvtF7Q0wM7aNzcfxvapJSK5Sm9WkwL9TgQzipQAPlUaHORWSsisiYGhOe8lblKqvCJfW_tyrrCo9WIoEQAXMs4ZsY6vN9lLxiq2XbRiHGOVISJMR6e-87xRem3OXXDDCP56FpK1DdHy2-jZ-h4hZjq0dEeBdIoN9Uh2TeuR9GrLUOKt14PYVQWlYkv2Uz5Rnv300NXllVO9Zu9DZqPHBAUrRaKL1v4uJoX12eUSRC7nlGzJzDBIdh5u65hEiZ33og8nrb800wqJyTprrZ_CzMBwCZcV-Kamz8dqXIInQAtDuKADoxSCE2W-2KYhHO1prWlWAy0dDk-57KKIQYvhi9D9NSiWmTbjM06hXC26z9WZbDYRVk620ar1LnUgfPJrCstyJLX29X5a29GxGfHgTzAbfHg1g9tvlCEJDcNV1cwu8AcA0VvwtivTL_oatzQcfrL6-bhk3rwRcwBihqvZ6y34VeL82WKsVz3qcaJySLZvgrUTS5pIWB1ne3nXqKVqqoFNQ_0ZzTPjf_C81HSILYU0PrNIJSaZlw6XMDUmsj6dvK9Dmv1PKLzRzhe-Ssy81SVOzi07Td5qyIfbQgzfQRO-_yqbd04RWBA9tMXPwFIAvVt5PZaASTRAT8iuuQwuh3M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/students/Natalie Labadie",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"students",
+						"Natalie Labadie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show()  email",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2ExOWI2ZTBkODFkNDdmZjhkNDJjNzcxN2M5YWNkYWRjNTQ3OGJkMmNkMjRjMmMwOTgzZTA4YjYzNTE1ZjU4Mjc5ZGZmNGEyZTRjY2U3NGUiLCJpYXQiOjE2NjY2Mzc5NDYuOTE4MTc0LCJuYmYiOjE2NjY2Mzc5NDYuOTE4MTc3LCJleHAiOjE2OTgxNzM5NDYuOTA3MTQ4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.E7Vy8u95paVs4Cw7KVkevSFBiNS-rvGg3b-MBQ_qSQvtF7Q0wM7aNzcfxvapJSK5Sm9WkwL9TgQzipQAPlUaHORWSsisiYGhOe8lblKqvCJfW_tyrrCo9WIoEQAXMs4ZsY6vN9lLxiq2XbRiHGOVISJMR6e-87xRem3OXXDDCP56FpK1DdHy2-jZ-h4hZjq0dEeBdIoN9Uh2TeuR9GrLUOKt14PYVQWlYkv2Uz5Rnv300NXllVO9Zu9DZqPHBAUrRaKL1v4uJoX12eUSRC7nlGzJzDBIdh5u65hEiZ33og8nrb800wqJyTprrZ_CzMBwCZcV-Kamz8dqXIInQAtDuKADoxSCE2W-2KYhHO1prWlWAy0dDk-57KKIQYvhi9D9NSiWmTbjM06hXC26z9WZbDYRVk620ar1LnUgfPJrCstyJLX29X5a29GxGfHgTzAbfHg1g9tvlCEJDcNV1cwu8AcA0VvwtivTL_oatzQcfrL6-bhk3rwRcwBihqvZ6y34VeL82WKsVz3qcaJySLZvgrUTS5pIWB1ne3nXqKVqqoFNQ_0ZzTPjf_C81HSILYU0PrNIJSaZlw6XMDUmsj6dvK9Dmv1PKLzRzhe-Ssy81SVOzi07Td5qyIfbQgzfQRO-_yqbd04RWBA9tMXPwFIAvVt5PZaASTRAT8iuuQwuh3M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/students/mohamed.borer@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"students",
+						"mohamed.borer@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update()",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2ExOWI2ZTBkODFkNDdmZjhkNDJjNzcxN2M5YWNkYWRjNTQ3OGJkMmNkMjRjMmMwOTgzZTA4YjYzNTE1ZjU4Mjc5ZGZmNGEyZTRjY2U3NGUiLCJpYXQiOjE2NjY2Mzc5NDYuOTE4MTc0LCJuYmYiOjE2NjY2Mzc5NDYuOTE4MTc3LCJleHAiOjE2OTgxNzM5NDYuOTA3MTQ4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.E7Vy8u95paVs4Cw7KVkevSFBiNS-rvGg3b-MBQ_qSQvtF7Q0wM7aNzcfxvapJSK5Sm9WkwL9TgQzipQAPlUaHORWSsisiYGhOe8lblKqvCJfW_tyrrCo9WIoEQAXMs4ZsY6vN9lLxiq2XbRiHGOVISJMR6e-87xRem3OXXDDCP56FpK1DdHy2-jZ-h4hZjq0dEeBdIoN9Uh2TeuR9GrLUOKt14PYVQWlYkv2Uz5Rnv300NXllVO9Zu9DZqPHBAUrRaKL1v4uJoX12eUSRC7nlGzJzDBIdh5u65hEiZ33og8nrb800wqJyTprrZ_CzMBwCZcV-Kamz8dqXIInQAtDuKADoxSCE2W-2KYhHO1prWlWAy0dDk-57KKIQYvhi9D9NSiWmTbjM06hXC26z9WZbDYRVk620ar1LnUgfPJrCstyJLX29X5a29GxGfHgTzAbfHg1g9tvlCEJDcNV1cwu8AcA0VvwtivTL_oatzQcfrL6-bhk3rwRcwBihqvZ6y34VeL82WKsVz3qcaJySLZvgrUTS5pIWB1ne3nXqKVqqoFNQ_0ZzTPjf_C81HSILYU0PrNIJSaZlw6XMDUmsj6dvK9Dmv1PKLzRzhe-Ssy81SVOzi07Td5qyIfbQgzfQRO-_yqbd04RWBA9tMXPwFIAvVt5PZaASTRAT8iuuQwuh3M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "asd",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "asdasd@asd.asd",
+							"type": "default"
+						},
+						{
+							"key": "course",
+							"value": "asd",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/students/12",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"students",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "destroy()",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2ExOWI2ZTBkODFkNDdmZjhkNDJjNzcxN2M5YWNkYWRjNTQ3OGJkMmNkMjRjMmMwOTgzZTA4YjYzNTE1ZjU4Mjc5ZGZmNGEyZTRjY2U3NGUiLCJpYXQiOjE2NjY2Mzc5NDYuOTE4MTc0LCJuYmYiOjE2NjY2Mzc5NDYuOTE4MTc3LCJleHAiOjE2OTgxNzM5NDYuOTA3MTQ4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.E7Vy8u95paVs4Cw7KVkevSFBiNS-rvGg3b-MBQ_qSQvtF7Q0wM7aNzcfxvapJSK5Sm9WkwL9TgQzipQAPlUaHORWSsisiYGhOe8lblKqvCJfW_tyrrCo9WIoEQAXMs4ZsY6vN9lLxiq2XbRiHGOVISJMR6e-87xRem3OXXDDCP56FpK1DdHy2-jZ-h4hZjq0dEeBdIoN9Uh2TeuR9GrLUOKt14PYVQWlYkv2Uz5Rnv300NXllVO9Zu9DZqPHBAUrRaKL1v4uJoX12eUSRC7nlGzJzDBIdh5u65hEiZ33og8nrb800wqJyTprrZ_CzMBwCZcV-Kamz8dqXIInQAtDuKADoxSCE2W-2KYhHO1prWlWAy0dDk-57KKIQYvhi9D9NSiWmTbjM06hXC26z9WZbDYRVk620ar1LnUgfPJrCstyJLX29X5a29GxGfHgTzAbfHg1g9tvlCEJDcNV1cwu8AcA0VvwtivTL_oatzQcfrL6-bhk3rwRcwBihqvZ6y34VeL82WKsVz3qcaJySLZvgrUTS5pIWB1ne3nXqKVqqoFNQ_0ZzTPjf_C81HSILYU0PrNIJSaZlw6XMDUmsj6dvK9Dmv1PKLzRzhe-Ssy81SVOzi07Td5qyIfbQgzfQRO-_yqbd04RWBA9tMXPwFIAvVt5PZaASTRAT8iuuQwuh3M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/students/12",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"students",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "export()",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2ExOWI2ZTBkODFkNDdmZjhkNDJjNzcxN2M5YWNkYWRjNTQ3OGJkMmNkMjRjMmMwOTgzZTA4YjYzNTE1ZjU4Mjc5ZGZmNGEyZTRjY2U3NGUiLCJpYXQiOjE2NjY2Mzc5NDYuOTE4MTc0LCJuYmYiOjE2NjY2Mzc5NDYuOTE4MTc3LCJleHAiOjE2OTgxNzM5NDYuOTA3MTQ4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.E7Vy8u95paVs4Cw7KVkevSFBiNS-rvGg3b-MBQ_qSQvtF7Q0wM7aNzcfxvapJSK5Sm9WkwL9TgQzipQAPlUaHORWSsisiYGhOe8lblKqvCJfW_tyrrCo9WIoEQAXMs4ZsY6vN9lLxiq2XbRiHGOVISJMR6e-87xRem3OXXDDCP56FpK1DdHy2-jZ-h4hZjq0dEeBdIoN9Uh2TeuR9GrLUOKt14PYVQWlYkv2Uz5Rnv300NXllVO9Zu9DZqPHBAUrRaKL1v4uJoX12eUSRC7nlGzJzDBIdh5u65hEiZ33og8nrb800wqJyTprrZ_CzMBwCZcV-Kamz8dqXIInQAtDuKADoxSCE2W-2KYhHO1prWlWAy0dDk-57KKIQYvhi9D9NSiWmTbjM06hXC26z9WZbDYRVk620ar1LnUgfPJrCstyJLX29X5a29GxGfHgTzAbfHg1g9tvlCEJDcNV1cwu8AcA0VvwtivTL_oatzQcfrL6-bhk3rwRcwBihqvZ6y34VeL82WKsVz3qcaJySLZvgrUTS5pIWB1ne3nXqKVqqoFNQ_0ZzTPjf_C81HSILYU0PrNIJSaZlw6XMDUmsj6dvK9Dmv1PKLzRzhe-Ssy81SVOzi07Td5qyIfbQgzfQRO-_yqbd04RWBA9tMXPwFIAvVt5PZaASTRAT8iuuQwuh3M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/export",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"export"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "import()",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2ExOWI2ZTBkODFkNDdmZjhkNDJjNzcxN2M5YWNkYWRjNTQ3OGJkMmNkMjRjMmMwOTgzZTA4YjYzNTE1ZjU4Mjc5ZGZmNGEyZTRjY2U3NGUiLCJpYXQiOjE2NjY2Mzc5NDYuOTE4MTc0LCJuYmYiOjE2NjY2Mzc5NDYuOTE4MTc3LCJleHAiOjE2OTgxNzM5NDYuOTA3MTQ4LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.E7Vy8u95paVs4Cw7KVkevSFBiNS-rvGg3b-MBQ_qSQvtF7Q0wM7aNzcfxvapJSK5Sm9WkwL9TgQzipQAPlUaHORWSsisiYGhOe8lblKqvCJfW_tyrrCo9WIoEQAXMs4ZsY6vN9lLxiq2XbRiHGOVISJMR6e-87xRem3OXXDDCP56FpK1DdHy2-jZ-h4hZjq0dEeBdIoN9Uh2TeuR9GrLUOKt14PYVQWlYkv2Uz5Rnv300NXllVO9Zu9DZqPHBAUrRaKL1v4uJoX12eUSRC7nlGzJzDBIdh5u65hEiZ33og8nrb800wqJyTprrZ_CzMBwCZcV-Kamz8dqXIInQAtDuKADoxSCE2W-2KYhHO1prWlWAy0dDk-57KKIQYvhi9D9NSiWmTbjM06hXC26z9WZbDYRVk620ar1LnUgfPJrCstyJLX29X5a29GxGfHgTzAbfHg1g9tvlCEJDcNV1cwu8AcA0VvwtivTL_oatzQcfrL6-bhk3rwRcwBihqvZ6y34VeL82WKsVz3qcaJySLZvgrUTS5pIWB1ne3nXqKVqqoFNQ_0ZzTPjf_C81HSILYU0PrNIJSaZlw6XMDUmsj6dvK9Dmv1PKLzRzhe-Ssy81SVOzi07Td5qyIfbQgzfQRO-_yqbd04RWBA9tMXPwFIAvVt5PZaASTRAT8iuuQwuh3M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "import",
+							"type": "file",
+							"src": "/C:/Users/User/Desktop/internship/New_Request-1666643738255.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/import",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"import"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
