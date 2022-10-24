@@ -15,9 +15,9 @@ class StudentsImport implements ToModel
     public function model(array $row)
     {
         return new Student([
-            'name'     => $row[0],
-            'email'    => $row[1],
-            'course' => $row[2],
+            'name'     => $row[1],
+            'email'    => $row[2],
+            'course' => $row[3],
         ]);
     }
 }
