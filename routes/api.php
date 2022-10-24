@@ -28,10 +28,3 @@ Route::group(['middleware' => 'client_credentials'], function () {
     Route::get('/export', [StudentController::class, 'export']);
     Route::post('/import', [StudentController::class, 'import']);
 });
-
-// Route::middleware('auth:api')->group(function () {
-//     Route::resource('/students', StudentController::class);
-//     // Route::get('/students/email/{}', [StudentController::class, 'searchByEmail']);
-//     // Route::get('/students/name/{}', [StudentController::class, 'searchByName']);
-
-// });
